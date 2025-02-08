@@ -37,3 +37,6 @@ tags
 
 # Environment #
 .envrc
+
+# Artifacts #
+*.zip
