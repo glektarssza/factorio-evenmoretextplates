@@ -1,5 +1,4 @@
 local evenmoretextplates = {}
---local original_textplates = require("__textplates__.textplates")
 
 evenmoretextplates.symbols = {"blank", "square", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l",
 "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
@@ -14,7 +13,7 @@ evenmoretextplates.symbols = {"blank", "square", "a", "b", "c", "d", "e", "f", "
 "quotes_single_left", "quotes_single_right", "quotes_double_left", "quotes_double_right",
 "at", "hash", "circle", "ring", "cog"
 }
---evenmoretextplates.symbol_by_char = original_textplates.symbol_by_char
+
 evenmoretextplates.symbol_by_char = {
     a = "a",
     b = "b",
@@ -83,7 +82,6 @@ evenmoretextplates.symbol_by_char = {
     ["!"] = "exclamation",
     ["#"] = "hash",
   }
---evenmoretextplates.types = original_textplates.types
 
 evenmoretextplates.new_types = {}
 
@@ -92,7 +90,7 @@ evenmoretextplates.new_materials = {
 	["plasticcoloured"] = "plastic-bar",
 }
 
-if settings.startup["evenmoretextplates-even-more"].value then
+if settings.startup["even-more-text-plates-2_0-even-more"].value then
 	evenmoretextplates.new_materials["wood"] = "wood"
 end
 

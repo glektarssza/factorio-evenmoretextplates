@@ -4,8 +4,8 @@
 local function text_sprite(size, material, symbol)
   if symbol == "blank" then symbol = "square" end
 
-  local graphicspath = "__EvenMoreTextPlates__/graphics"
-  if material == "plastic" and settings.startup["evenmoretextplates-legacy-plastic"].value == true then
+  local graphicspath = "__even-more-text-plates-2.0__/graphics"
+  if material == "plastic" and settings.startup["even-more-text-plates-2_0-legacy-plastic"].value == true then
     graphicspath = graphicspath.."/legacy"
   end
 
@@ -30,8 +30,8 @@ local function text_sprite(size, material, symbol)
       shift = {2/32, 0},
     },
   }
-  
-  if material == "plastic" and settings.startup["evenmoretextplates-legacy-plastic"].value == true then
+
+  if material == "plastic" and settings.startup["even-more-text-plates-2_0-legacy-plastic"].value == true then
     layers = {
       {
         filename = graphicspath.."/entity/"..material.."/"..symbol..".png",
@@ -64,8 +64,8 @@ for _, type in pairs(evenmoretextplates.new_types) do
   local material = type.material
   local materialtype = (material == "plasticcoloured") and "plastic" or type.material
 
-  local graphicspath = "__EvenMoreTextPlates__/graphics"
-  if materialtype == "plastic" and settings.startup["evenmoretextplates-legacy-plastic"].value == true then
+  local graphicspath = "__even-more-text-plates-2.0__/graphics"
+  if materialtype == "plastic" and settings.startup["even-more-text-plates-2_0-legacy-plastic"].value == true then
     graphicspath = graphicspath.."/legacy"
   end
   local icon = graphicspath.."/icon/"..materialtype.."/blank.png"
@@ -86,7 +86,12 @@ for _, type in pairs(evenmoretextplates.new_types) do
         result = type.name,
     },
     render_layer = "lower-object-above-shadow",
-    collision_mask = {"floor-layer", "water-tile"}, -- this does not work ... yet
+    collision_mask = {
+        layers = {
+            water_tile = true,
+            floor = true
+        }
+    },
     resistances = {
         {type = "fire", percent = 80},
     },

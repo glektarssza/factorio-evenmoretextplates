@@ -1,18 +1,18 @@
-#!/bin/sh
+#!/bin/bash
 
-modname="EvenMoreTextPlates"
+local MOD_NAME="even-more-text-plates-2.0"
 
-if [ ! "${FACTORIOPATH}" ]; then
-    echo "no factorio path found"
+if [ ! "${FACTORIO_PATH}" ]; then
+    echo "No Factorio path found"
     exit 1
 fi
 
-if [ ! -d "${FACTORIOPATH}/mods" ]; then
-    mkdir -v "${FACTORIOPATH}/mods"
+if [ ! -d "${FACTORIO_PATH}/mods" ]; then
+    mkdir -v "${FACTORIO_PATH}/mods"
 fi
 
-modversion=$(grep '"version"' "${modname}/info.json"| cut -d ":" -f2 | sed 's/[",]//g')
+local MOD_VERSION=$(grep '"version"' "${MOD_NAME}/info.json"| cut -d ":" -f2 | sed 's/[",]//g')
 
-echo "${modversion}"
+echo "${MOD_VERSION}"
 
-ln -sfv "${PWD}/${modname}" "${FACTORIOPATH}/mods/${modname}_${modversion}"
+ln -sfv "${PWD}/${MOD_NAME}" "${FACTORIO_PATH}/mods/${MOD_NAME}_${MOD_VERSION}"

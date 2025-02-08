@@ -1,0 +1,11 @@
+{
+    "name": "even-more-text-plates-2.0",
+    "title": "Even More Text Plates 2.0",
+    "version": "2.0.0",
+    "factorio_version": "2.0",
+    "dependencies": ["base >= 2.0.0", "textplates >= 0.6.9"],
+    "author": "glektarssza",
+    "description": "An extension for Earendel's Text Plates. Adds plastic plates (white and player-coloured) and more with the original Text Plates font.\n\nBased on Deadlock's More Text Plates mod.\n\nNow for Factorio 2.0!",
+    "contact": "https://github.com/glektarssza/factorio-evenmoretextplates/issues",
+    "homepage": "https://mods.factorio.com/mod/even-more-text-plates-2.0/"
+}
