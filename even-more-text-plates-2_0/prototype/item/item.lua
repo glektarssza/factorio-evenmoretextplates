@@ -10,7 +10,7 @@ for _, type in pairs(evenmoretextplates.new_types) do
 
     count = count + 1
 
-    local graphicspath = "__even-more-text-plates-2.0__/graphics"
+    local graphicspath = "__even-more-text-plates-2_0__/graphics"
     if materialtype == "plastic" and settings.startup["even-more-text-plates-2_0-legacy-plastic"].value then
       graphicspath = graphicspath.."/legacy"
     end

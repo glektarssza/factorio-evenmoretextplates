@@ -14,7 +14,7 @@ for material, tech_data in pairs(evenmoretextplates.technologies) do
           name = "textplates-"..material,
           effects = {
           },
-          icon = "__even-more-text-plates-2.0__/graphics/entity/"..icon_material.."/t.png",
+          icon = "__even-more-text-plates-2_0__/graphics/entity/"..icon_material.."/t.png",
           icon_size = 128,
           order = "a",
           prerequisites = {prerequisite},

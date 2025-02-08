@@ -1,6 +1,6 @@
 #!/bin/bash
 
-local MOD_NAME="even-more-text-plates-2.0"
+local MOD_NAME="even-more-text-plates-2_0"
 
 if [ ! "${FACTORIO_PATH}" ]; then
     echo "No Factorio path found"

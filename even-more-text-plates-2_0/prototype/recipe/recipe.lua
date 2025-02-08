@@ -7,7 +7,7 @@ for _, type in pairs(evenmoretextplates.new_types) do
     local materialtype = (material == "plasticcoloured") and "plastic" or material
     local tech = data.raw.technology["textplates-"..type.material]
 
-    local graphicspath = "__even-more-text-plates-2.0__/graphics"
+    local graphicspath = "__even-more-text-plates-2_0__/graphics"
     if materialtype == "plastic" and settings.startup["even-more-text-plates-2_0-legacy-plastic"].value then
       graphicspath = graphicspath.."/legacy"
     end

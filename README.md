@@ -17,6 +17,10 @@ Finally more variants. I will, if time permits, add new variants slowly over tim
 
 A Huge Thanks to PantherX for letting me use Dectorios wood tiles :)
 
+### 2.0.0 updates: ###
+
+Updated for Factorio 2.0.
+
 ## Credits:
 
 - [Zengineer](https://mods.factorio.com/user/Zengineer) - for creating this and maintaining it up to the release of Factorio 2.0.

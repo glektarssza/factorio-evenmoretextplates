@@ -4,7 +4,7 @@
 local function text_sprite(size, material, symbol)
   if symbol == "blank" then symbol = "square" end
 
-  local graphicspath = "__even-more-text-plates-2.0__/graphics"
+  local graphicspath = "__even-more-text-plates-2_0__/graphics"
   if material == "plastic" and settings.startup["even-more-text-plates-2_0-legacy-plastic"].value == true then
     graphicspath = graphicspath.."/legacy"
   end
@@ -64,7 +64,7 @@ for _, type in pairs(evenmoretextplates.new_types) do
   local material = type.material
   local materialtype = (material == "plasticcoloured") and "plastic" or type.material
 
-  local graphicspath = "__even-more-text-plates-2.0__/graphics"
+  local graphicspath = "__even-more-text-plates-2_0__/graphics"
   if materialtype == "plastic" and settings.startup["even-more-text-plates-2_0-legacy-plastic"].value == true then
     graphicspath = graphicspath.."/legacy"
   end
