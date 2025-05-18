@@ -5,7 +5,7 @@ local evenmoretextplates = require("globals")
 for _, type in pairs(evenmoretextplates.new_types) do
     local size = type.size
     local material = type.material
-    local materialtype = (material == "plasticcoloured") and "plastic" or material
+    local materialtype = (material == "plasticcolored") and "plastic" or material
     local count = 0
 
     count = count + 1
@@ -25,7 +25,7 @@ for _, type in pairs(evenmoretextplates.new_types) do
       order = "f[textplates]-"..material.."-"..(size == "small" and 1 or 2).."-"..string.format( "%03d", count ),
       stack_size = 100,
       place_result = type.name,
-      localised_name = { "item-name.textplate", { "textplates."..size }, {"textplates.".. material } }
+      localized_name = { "item-name.textplate", { "textplates."..size }, {"textplates.".. material } }
     }
     if size == "large" then
       base_item.icon = graphicspath.."/icon/"..material.."/square.png"
@@ -36,7 +36,7 @@ for _, type in pairs(evenmoretextplates.new_types) do
     for _, symbol in pairs(type.symbols) do
       local symbol_item = {
         type = "item",
-        name = type.name .. "-" .. symbol, -- all symbols must have the base item name fillowered by "-".. symbol
+        name = type.name .. "-" .. symbol, -- all symbols must have the base item name followed by the symbol with "-" joining the two
         icon = graphicspath.."/icon/"..materialtype.."/"..symbol..".png",
         icon_size = 64,
         hidden = true,
@@ -44,7 +44,7 @@ for _, type in pairs(evenmoretextplates.new_types) do
         order = "f[textplates]-"..material.."-"..(size == "small" and 1 or 2).."-"..string.format( "%03d", count ),
         stack_size = 100,
         place_result = type.name,
-        localised_name = { "item-name.textplate", { "textplates."..size }, {"textplates.".. material } }
+        localized_name = { "item-name.textplate", { "textplates."..size }, {"textplates.".. material } }
       }
       data:extend({ symbol_item })
     end

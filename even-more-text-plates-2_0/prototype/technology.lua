@@ -8,7 +8,7 @@ for material, tech_data in pairs(evenmoretextplates.technologies) do
     end
     if prerequisite then
       local prerequisite_tech = data.raw.technology[prerequisite]
-      local icon_material = (material == "plasticcoloured") and "plastic" or material
+      local icon_material = (material == "plasticcolored") and "plastic" or material
       data:extend({{
           type = "technology",
           name = "textplates-"..material,
@@ -23,7 +23,7 @@ for material, tech_data in pairs(evenmoretextplates.technologies) do
               ingredients = table.deepcopy(prerequisite_tech.unit.ingredients),
               time = prerequisite_tech.unit.time
           },
-          localised_name = { "technology-name.textplate", {"textplates.".. material.."-C"} }
+          localized_name = { "technology-name.textplate", {"textplates.".. material.."-C"} }
       }})
     end
   end
