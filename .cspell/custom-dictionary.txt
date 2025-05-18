@@ -1,0 +1,19 @@
+# Custom Dictionary Words
+craftable
+curlybracket
+Dectorio's
+deepcopy
+Earendel
+evenmoretextplates
+factorio
+gheift
+graphicspath
+Gribanov
+materialtype
+newlayer
+petremann
+plasticcolored
+squarebracket
+textplate
+textplates
+Zengineer
