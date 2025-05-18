@@ -14,8 +14,11 @@ if (-not (Test-Path -PathType Container -Path "$local:factorioPath\mods")) {
     New-Item -Type Directory -Name "mods" -Path "$local:factorioPath";
 }
 
-$local:modVersion = Get-Content -Path "$local:modName\info.json" | Select-String -Pattern '"version": "(.+)"' | Select-Object -ExpandProperty Matches | Select-Object -ExpandProperty Groups | Select-Object -ExpandProperty Captures | Select-Object -Property Value -Last 1 -ExpandProperty Value;
+Write-Output "Symbolic linking `"$local:modName`" v$local:modVersion to `"$local:factorioPath\mods\$($local:modName)`"";
 
-Write-Output "Symbolic linking $local:modName v$local:modVersion to $local:factorioPath\mods\$($local:modName)_$($local:modVersion)";
+if (Test-Path -Path "$local:factorioPath/mods/$($local:modName)") {
+    Write-Warning "`"$local:factorioPath\mods\$($local:modName)`" already exists, attempting to delete..."
+    (Get-Item -Path "$local:factorioPath/mods/$($local:modName)").Delete();
+}
 
-return New-Item -Force -Type SymbolicLink -Target "$PSScriptRoot/$modName" "$local:factorioPath/mods/$($local:modName)_$($local:modVersion)";
+return New-Item -Force -Type SymbolicLink -Target "$PSScriptRoot/$modName" "$local:factorioPath/mods/$($local:modName)";
