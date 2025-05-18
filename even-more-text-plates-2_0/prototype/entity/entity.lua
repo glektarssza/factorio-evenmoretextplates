@@ -62,7 +62,7 @@ end
 for _, type in pairs(evenmoretextplates.new_types) do
   local size = type.size
   local material = type.material
-  local materialtype = (material == "plasticcoloured") and "plastic" or type.material
+  local materialtype = (material == "plasticcolored") and "plastic" or type.material
 
   local graphicspath = "__even-more-text-plates-2_0__/graphics"
   if materialtype == "plastic" and settings.startup["even-more-text-plates-2_0-legacy-plastic"].value == true then
@@ -77,7 +77,7 @@ for _, type in pairs(evenmoretextplates.new_types) do
     type = "simple-entity-with-force",
     icon = icon,
     icon_size = 64,
-    localised_name = { "entity-name.textplate", { "textplates."..size }, {"textplates.".. material } },
+    localized_name = { "entity-name.textplate", { "textplates."..size }, {"textplates.".. material } },
     flags = {"placeable-neutral", "player-creation"},
     minable = {
         count=1,
@@ -105,7 +105,7 @@ for _, type in pairs(evenmoretextplates.new_types) do
 
   for id, symbol in ipairs(type.symbols) do
     local picture = text_sprite(size, materialtype, symbol)
-    if material == "plasticcoloured" then
+    if material == "plasticcolored" then
       local newlayer = table.deepcopy(picture.layers[1])
       newlayer.apply_runtime_tint = true
       table.insert(picture.layers, newlayer)

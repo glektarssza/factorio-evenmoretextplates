@@ -87,7 +87,7 @@ evenmoretextplates.new_types = {}
 
 evenmoretextplates.new_materials = {
 	["plastic"] = "plastic-bar",
-	["plasticcoloured"] = "plastic-bar",
+	["plasticcolored"] = "plastic-bar",
 }
 
 if settings.startup["even-more-text-plates-2_0-even-more"].value then
@@ -96,7 +96,7 @@ end
 
 evenmoretextplates.technologies = {
 	["plastic"] = {prerequisite = {"plastics"}},
-	["plasticcoloured"] = {prerequisite = {"plastics"}},
+	["plasticcolored"] = {prerequisite = {"plastics"}},
 }
 
 for material, ingredient in pairs(evenmoretextplates.new_materials) do

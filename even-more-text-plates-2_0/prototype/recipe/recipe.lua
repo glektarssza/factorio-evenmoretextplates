@@ -4,7 +4,7 @@
 for _, type in pairs(evenmoretextplates.new_types) do
     local size = type.size
     local material = type.material
-    local materialtype = (material == "plasticcoloured") and "plastic" or material
+    local materialtype = (material == "plasticcolored") and "plastic" or material
     local tech = data.raw.technology["textplates-"..type.material]
 
     local graphicspath = "__even-more-text-plates-2_0__/graphics"
